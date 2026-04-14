@@ -1,0 +1,18 @@
+{
+  "source_file": "/Users/tarikay/Desktop/evrim-demo/tmpon0dacpf.pdf",
+  "invoice_pages": [
+    1
+  ],
+  "masked_text": "[Page 1]\nTarik Corporation\nDuplicate\nCustomer - Payer\nTARIK CORPORATION TURKEY OTOMOBIL LTD. STI\nDEGIRMENDERE\n41950 KOCAELI\nMASK_5F2C2461\nInvoice\nPage no: 1 of 1\nInvoice No: MASK_27E11D40\nDate & Tax point: 10.11.2024\nCustomer No: 12343 / 4645\nCustomer VAT No.: TR9250174623\nTerms of Payment: Terms of Delivery: 45 Days Net\namount\nCIF Dealer yard\nMASK_5F2C2461\nSent by/Sent to: GRANDE\nProduct description Net price TRY (excl. VAT)\n1 piece new passenger car TARIK MX6 256 M1 HL 0C1 49\nModel Year: 2025 Country of Origin: UAE\nVIN: MASK_D66C9D7D: MASK_27E11D40\nEngine: 2.0L petrol 1969CC 250HP 4 CYL Engine No:B420T11 T5647486\nBody: NO SIGNIFICATION Transmission: 8-SPEED AUTO AWD\nKey No: Weight: 2.151 kg\nIMEI: MASK_902D521D\nCIS/VISTA Order No: MASK_27E11D40\n256 M1 HL 0C1 49 Model:TARIK MX6 1.390.200,00\nCOL72300 DENIM GREEN 21.800,00\nUPHRCE000 CHARCOAL/LEAC/CARDAMOM 46.800,00\nOPT000030 Sunroof 37.600,00\nOPT000139 CAMERA 360 DEGREE VIEW 16.400,00\nOPT000140 MASK_D66C9D7D incl MASK_5F2C2461 sensr 11.700,00\nOPT000179 Tinted Rear Glasses RE DOR&C A 11.100,00\nOPT000384 MASSAGE IN FRONT SEAT 16.900,00\nOPT000871 Heated WindScreen 5.900,00\nOPT001000 AIR SUSPENSION WITH CCD 52.900,00\nNet amount TRY 1.611.300,00\nFreight TRY 20.100,00\nInsurance TRY 500,00\nSub total TRY 1.631.900,00\n____________________\nNumber of new passenger cars:\n1 pcs 256 M1 HL 0C1 49 - TARIK MX6 P4 Mp 2.0l 250/8/360 Mi\n1 pcs in Total\nTotal Net Amount (excl VAT) TRY Export of goods. VAT code 90 (0,00 %) 1.631.900,00\n0,00\nTotal Amount TRY 1.631.900,00",
+  "pii_mapping": {
+    "MASK_902D521D": "352893493907010",
+    "MASK_86AE17DF": "TURKEY",
+    "MASK_AEA8F1AC": "Turkey",
+    "MASK_DC07FAE8": "YV1LFM1V7SGAGH5 FYON",
+    "MASK_D66C9D7D": "TARIK Grd Alarm",
+    "MASK_5F2C2461": "Vol",
+    "MASK_AA728C40": "487382592",
+    "MASK_EA94BA18": "69474356",
+    "MASK_27E11D40": "12504140"
+  }
+}
