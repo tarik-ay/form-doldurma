@@ -4,7 +4,9 @@
 
 ```bash
 pip install pdfplumber presidio-analyzer presidio-anonymizer streamlit anthropic
+pip install pytesseract pdf2image
 python -m spacy download en_core_web_lg
+brew install tesseract poppler   # macOS only
 ```
 
 ## Run Order
@@ -36,7 +38,9 @@ Open `http://localhost:8501`
 ```
 PDF upload
     |
-pdfplumber  -->  raw text  (digital PDF)
+pdfplumber  -->  raw text extraction
+    |
+Text too short? --> pytesseract OCR (scanned PDFs)
     |
 Presidio    -->  mask PII, save mapping  (runs LOCAL)
     |
@@ -51,14 +55,36 @@ Streamlit   -->  colour-coded form + source tooltips
 
 | File | Description |
 |---|---|
-| step1_mask.py | PDF parse + Presidio PII masking |
+| step1_mask.py | PDF parse + OCR + Presidio PII masking |
 | step2_extract.py | Claude API field extraction |
 | step3_app.py | Streamlit demo UI |
-| masked_output.json | PII mapping — LOCAL only |
+| requirements.txt | Streamlit Cloud dependencies |
+| .gitignore | Keeps JSON files out of GitHub |
+| masked_output.json | PII mapping — LOCAL only, never commit |
 | claude_input.json | Claude-safe input (no PII) |
 | extraction_result.json | Claude output |
 
+## PDF Support
+
+| PDF Type | Method |
+|---|---|
+| Digital (ERP/Word export) | pdfplumber — fast, accurate |
+| Scanned (physical document) | pytesseract OCR — automatic fallback |
+
+## Prompt Development Plan
+
+```
+Collect 20-25 invoices
+    |
+Train (15-18) --> prompt iteration
+Test  (5-7)   --> blind evaluation
+    |
+LLM as Judge --> rubric scoring
+    |
+Production ready prompt
+```
+
 ## Notes
-- Scanned PDFs: add OCR layer (pytesseract or Azure Document Intelligence)
+- Extend INVOICE_KEYWORDS in step1_mask.py for new languages/formats
 - Production: deploy as standalone Flask/FastAPI service or connect via py4j bridge
-- Multi-language: extend INVOICE_KEYWORDS list in step1_mask.py
+- Streamlit Cloud: add ANTHROPIC_API_KEY in Settings → Secrets
